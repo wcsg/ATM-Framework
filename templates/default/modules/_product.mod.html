@@ -1,0 +1,48 @@
+<div id="product-module" >
+	<div id="form-section">
+    	<form name="productform" id="productform" action="" method="post">
+        	<span>Code :</span> <input class="input-small" type="text" name="code" id="code"  required="required" /><br />
+			<span>Name :</span> <input class="input-xlarge" type="text" name="name" id="name" required="required" /><br />
+            <span>Amount :</span> <input class="input-small" type="text" name="amount" id="amount" required="required" /><br />
+            <span>Price :</span> <input class="input-small" type="text" name="price" id="price" required="required" /><br />
+            <span>Status :</span>
+            <select class="span2" name="status" id="status" >
+            	<option value="Active">Active</option>               	<option value="Deactive">Deactive</option>
+            </select><br />
+            <input class="btn btn-primary" type="submit" name="savebtn" id="savebtn" value="Save"  />
+        </form>
+    </div>
+	
+</div>
+
+<div id="results" class="table-responsive" >
+	<?php 
+    $result = getProductList();
+    if( $result and (mysql_num_rows($result)>0) ) {
+		echo '<center><h2>' . 'Product List' . '</h2></center>'; 
+		echo '<table class="table table-hover table-bordered table-striped" >';
+		echo '<tr>';
+		echo '<th width="1">' . 'No' . '</th>';
+		echo '<th>' . 'Code' . '</th>';
+		echo '<th>' . 'Name' . '</th>';
+		echo '<th>' . 'Amount' . '</th>';
+		echo '<th>' . 'Price' . '</th>';
+		echo '<th>' . 'Status' . '</th>';
+		echo '</tr>';
+		$line = 1;
+		while( $row = mysql_fetch_assoc($result) ) {
+
+			echo '<tr >';
+			echo '<td>' . $line++ . '</td>';
+			echo '<td>' . $row['code'] . '</td>';
+			echo '<td>' . $row['name'] . '</td>';
+			echo '<td>' . $row['amount'] . '</td>';
+			echo '<td>' . $row['price'] . '</td>';
+			echo '<td>' . $row['status'] . '</td>';
+
+			echo '</tr>';
+		}
+		echo '</table>';
+	}
+    ?>
+</div>

@@ -1,0 +1,16 @@
+/* CSS Document */
+#new-module {
+	
+}
+
+#news-module .newstext {
+	color:red;
+	font-size:20px;
+	font-family:Tahoma, Geneva, sans-serif;
+	background-color:yellow;	
+}
+
+#news-module h1 {
+	color:blue;
+}
+

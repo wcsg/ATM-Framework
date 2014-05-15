@@ -1,0 +1,22 @@
+<div id="login-module"  >
+	<div class="main"  >
+		<div class="header-title" >MPZ Framework</div>
+        <form id="login-form" class="rounded" method="post" action="">
+			<div class="field">
+				<span>
+					<input type="text" class="input-large" name="username" id="username"  value="" placeholder="Username" />
+				</span> 
+			</div>
+			<div class="field">
+					<input type="password" class="input-large"  name="password" id="password" value="" placeholder="Password" />
+			</div>
+			<br />
+        	<input type="submit" name="submitbtn" id="submitbtn"  class="btn btn-primary" value="Login" />
+                         
+		</form>
+          
+        <br clear="all" />
+        <div class="error" ><?php echo $_login_message; ?></div>
+    </div>
+    <br clear="all" />
+</div>

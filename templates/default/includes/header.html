@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PHP Class</title>
+<meta name="keywords" content="MPZ,Masoud Pour Zahmatkesh"  />
+<meta name="author" content="MPZ">
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" type="image/ico" href="<?php echo TEMPLATE; ?>/images/favicon.gif" />
+<link rel=stylesheet type="text/css" href="<?php echo TEMPLATE; ?>/css/library/bootstrap-responsive.min.css" >
+<link rel=stylesheet type="text/css" href="<?php echo TEMPLATE; ?>/css/library/bootstrap.min.css" >	
+<link rel=stylesheet type="text/css" media="screen, projection" href="<?php echo TEMPLATE; ?>/css/main.css" >
+<?php if( isset($_module_css_document) ) { ?>
+<link rel=stylesheet type="text/css" href="<?php echo $_module_css_document; ?>" >
+<?php } ?>
+
+<script type="text/javascript">
+var msgBoxImagePath = "<?php echo TEMPLATE ?>/images/";
+</script>
+<script src="<?php echo TEMPLATE; ?>/js/library/jquery-1.9.1.min.js"></script>
+<script src="<?php echo TEMPLATE; ?>/js/library/jquery.blockUI.js"></script>
+<script src="<?php echo TEMPLATE; ?>/js/library/jquery.msgBox.js"></script>
+<script src="<?php echo TEMPLATE; ?>/js/library/jquery-ui/ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="<?php echo TEMPLATE; ?>/js/main.js" ></script>
+<?php if( isset($_module_js_document) ) { ?>
+<script type="text/javascript" src="<?php echo $_module_js_document; ?>" ></script>
+<?php } ?>
+</head>
+<body id="bd" >
+<div class="main" >
+<?php if($_module!='login') { ?>
+<div id="header" >
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a class="brand" href="http://www.mpz.ir" title="Go home">MPZ Framework <span class="label label-beta">Build 3.0</span></a>
+</div>  
+</div>  
+</div>  
+</div>
+<?php } ?>
